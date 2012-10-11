@@ -1,0 +1,31 @@
+body {
+	width : 1024px;
+	min-height : 100%;
+	padding: 0;
+	margin: 0 auto;
+	font-size: 100%/120%;
+	font-family: verdana,helvitica,sans-serif;
+}
+
+table {
+	width: 50%;
+	border: 1px solid black;
+}
+
+table th{
+	 font-size: 15px;
+	 font-weight: bold;
+	 background-color: #569107;
+}
+
+table td{
+	font-size: 14px;
+	font-weight: normal;
+}
+
+table tr:nth-child(odd) td{
+	 background-color:#E2E8DA; 
+}
+table tr:nth-child(even) td{
+	 background-color:#F4F7F0; 
+}

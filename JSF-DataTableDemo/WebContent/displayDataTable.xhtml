@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:ui="http://java.sun.com/jsf/facelets" 
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>h:dataTable Demo</title>
+	<h:outputStylesheet name="style.css" library="css"></h:outputStylesheet> 
+</h:head>   
+<h:body>
+	<h:form>
+		<h:dataTable id="countryCapitalList" value="#{countryCapitalList.getCountryKeyAsList()}" var="country">
+			<f:facet name="header">
+				<h:outputText value="Country and Capital Details" />
+			</f:facet>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Country" />
+				</f:facet>
+				<h:outputText value="#{country}" />
+			</h:column>
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Capital" />
+				</f:facet>
+				<h:outputText value="#{countryCapitalList.countryAndCapital[country]}" />
+			</h:column>
+			<f:facet name="footer">
+				<h:outputText value="This is footer of the table...!" />
+			</f:facet>
+		</h:dataTable>
+	</h:form>
+</h:body>   
+</html>
